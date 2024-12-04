@@ -295,6 +295,44 @@ export const constantRoutes: RouteRecordRaw[] = [
             }
           }
         ]
+      },
+      {
+        path: "TargetCalculation",
+        component: () => import("@/views/AnnualBudget/TargetCalculation/index.vue"),
+        redirect: "/AnnualBudget/TargetCalculation/menu1-1",
+        name: "TargetCalculation",
+        meta: {
+          title: "目标测算"
+        },
+        children: [
+          {
+            path: "menu2-1",
+            component: () => import("@/views/AnnualBudget/TargetCalculation/menu-1/index.vue"),
+            name: "menu2-1",
+            meta: {
+              title: "条线存款业务利息预算编制表",
+              keepAlive: true
+            }
+          },
+          {
+            path: "menu2-2",
+            component: () => import("@/views/AnnualBudget/TargetCalculation/menu-2/index.vue"),
+            name: "menu2-2",
+            meta: {
+              title: "分行其他非息收入表",
+              keepAlive: true
+            }
+          },
+          {
+            path: "menu2-3",
+            component: () => import("@/views/AnnualBudget/TargetCalculation/menu-3/index.vue"),
+            name: "menu2-3",
+            meta: {
+              title: "增值税参数表",
+              keepAlive: true
+            }
+          }
+        ]
       }
     ]
   }

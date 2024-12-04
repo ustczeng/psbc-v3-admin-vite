@@ -61,7 +61,7 @@ const bufferData: any = ref(null)
 onActivated(() => {
   console.log("page2-onActivated")
   if (bufferData.value) {
-    loadData(bufferData.value)
+    // loadData(bufferData.value)
   }
 })
 

@@ -25,3 +25,27 @@ export function getLeasedAssetsApi(params: Report.ReportRequestData) {
     params
   })
 }
+/**targetCalculationMenu1*/
+export function getTargetCalculationMenu1Api(params: Report.ReportRequestData) {
+  return request({
+    url: "report/getTargetCalculationMenu1",
+    method: "get",
+    params
+  })
+}
+/**targetCalculationMenu2*/
+export function getTargetCalculationMenu2Api(params: Report.ReportRequestData) {
+  return request({
+    url: "report/getTargetCalculationMenu2",
+    method: "get",
+    params
+  })
+}
+/**targetCalculationMenu3*/
+export function getTargetCalculationMenu3Api(params: Report.ReportRequestData) {
+  return request({
+    url: "report/getTargetCalculationMenu3",
+    method: "get",
+    params
+  })
+}
