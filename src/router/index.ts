@@ -247,6 +247,56 @@ export const constantRoutes: RouteRecordRaw[] = [
         }
       }
     ]
+  },
+  {
+    path: "/AnnualBudget",
+    component: Layouts,
+    redirect: "/AnnualBudget/BudgetPreparation",
+    name: "AnnualBudget",
+    meta: {
+      title: "管理年度预算",
+      svgIcon: "menu"
+    },
+    children: [
+      {
+        path: "BudgetPreparation",
+        component: () => import("@/views/AnnualBudget/BudgetPreparation/index.vue"),
+        redirect: "/AnnualBudget/BudgetPreparation/menu1-1",
+        name: "BudgetPreparation",
+        meta: {
+          title: "预算编制"
+        },
+        children: [
+          {
+            path: "menu1-1",
+            component: () => import("@/views/AnnualBudget/BudgetPreparation/menu-1/index.vue"),
+            name: "DepositInterestRate",
+            meta: {
+              title: "存款利率表",
+              keepAlive: true
+            }
+          },
+          {
+            path: "menu1-2",
+            component: () => import("@/views/AnnualBudget/BudgetPreparation/menu-2/index.vue"),
+            name: "LeasedAssets",
+            meta: {
+              title: "经营租入资产表",
+              keepAlive: true
+            }
+          },
+          {
+            path: "menu1-3",
+            component: () => import("@/views/AnnualBudget/BudgetPreparation/menu-3/index.vue"),
+            name: "LoanBusinessIncome",
+            meta: {
+              title: "贷款业务收入情况表",
+              keepAlive: true
+            }
+          }
+        ]
+      }
+    ]
   }
 ]
 
